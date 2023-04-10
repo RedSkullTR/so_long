@@ -6,7 +6,7 @@
 /*   By: aeroglu <aeroglu@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/06 02:51:04 by aeroglu           #+#    #+#             */
-/*   Updated: 2023/04/09 06:42:43 by aeroglu          ###   ########.fr       */
+/*   Updated: 2023/04/11 00:11:27 by aeroglu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,6 @@ void	numb_of_element_check(t_arg *arg)
 int	numb_of_element(t_arg *arg)
 {
 	numb_of_element_check(arg);
-	printf("%d", arg->c_count);
 	if (arg->p_count != 1 || arg->e_count != 1)
 	{
 		perror("The number of elements is wrong!!\n");

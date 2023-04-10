@@ -6,7 +6,7 @@
 /*   By: aeroglu <aeroglu@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/04 02:41:52 by aeroglu           #+#    #+#             */
-/*   Updated: 2023/04/10 20:54:36 by aeroglu          ###   ########.fr       */
+/*   Updated: 2023/04/11 00:11:06 by aeroglu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,7 +63,6 @@ void	unreachable_exit_control(t_arg *arg)
 int	valid_map(t_arg *arg)
 {
 	recursive_control(arg, arg->player_y, arg->player_x);
-	printf("\n%d\n", arg->c_count);
 	collectable_control(arg);
 	unreachable_exit_control(arg);
 	if (arg->c_count == 0)

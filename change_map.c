@@ -6,7 +6,7 @@
 /*   By: aeroglu <aeroglu@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/09 02:59:41 by aeroglu           #+#    #+#             */
-/*   Updated: 2023/04/09 06:42:27 by aeroglu          ###   ########.fr       */
+/*   Updated: 2023/04/11 00:31:43 by aeroglu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	start_control(t_arg *arg, int y, int x)
 {
 	if (arg->map[y + 1][x] != '.' &&
-		arg->map[y + 1][x] != '1')
+		arg->map[y + 1][x] != '1' && arg->map[y - 1][x] != 'E')
 	{
 		y++;
 		if (arg->map[y][x] == 'E')
@@ -31,7 +31,7 @@ void	start_control(t_arg *arg, int y, int x)
 void	second_control(t_arg *arg, int y, int x)
 {
 	if (arg->map[y][x + 1] != '.' &&
-		arg->map[y][x + 1] != '1')
+		arg->map[y][x + 1] != '1' && arg->map[y - 1][x] != 'E')
 	{
 		x++;
 		if (arg->map[y][x] == 'E')
@@ -47,7 +47,7 @@ void	second_control(t_arg *arg, int y, int x)
 void	third_control(t_arg *arg, int y, int x)
 {
 	if (arg->map[y - 1][x] != '.' &&
-		arg->map[y - 1][x] != '1')
+		arg->map[y - 1][x] != '1' && arg->map[y - 1][x] != 'E')
 	{
 		y--;
 		if (arg->map[y][x] == 'E')
@@ -63,7 +63,7 @@ void	third_control(t_arg *arg, int y, int x)
 void	fourth_control(t_arg *arg, int y, int x)
 {
 	if (arg->map[y][x - 1] != '.' &&
-		arg->map[y][x - 1] != '1')
+		arg->map[y][x - 1] != '1' && arg->map[y - 1][x] != 'E')
 	{
 		x--;
 		if (arg->map[y][x] == 'E')
