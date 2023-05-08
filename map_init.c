@@ -6,7 +6,7 @@
 /*   By: aeroglu <aeroglu@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/04 03:19:39 by aeroglu           #+#    #+#             */
-/*   Updated: 2023/04/11 02:40:15 by aeroglu          ###   ########.fr       */
+/*   Updated: 2023/05/08 21:05:39 by aeroglu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,7 +85,6 @@ int	ft_action(int key, t_arg *arg)
 	y = arg->player_y;
 	if (key == 53)
 		ft_exit(arg);
-
 	set_player_img(key, &x, &y, arg);
 	mlx_clear_window(arg->mlx, arg->mlx_win);
 	ft_map_mani(arg, x, y, key);

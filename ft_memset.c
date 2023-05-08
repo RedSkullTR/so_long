@@ -1,32 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aeroglu <aeroglu@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/03 20:19:59 by aeroglu           #+#    #+#             */
-/*   Updated: 2023/05/08 20:51:38 by aeroglu          ###   ########.fr       */
+/*   Created: 2023/05/07 15:24:51 by aeroglu           #+#    #+#             */
+/*   Updated: 2023/05/07 15:25:15 by aeroglu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long.h"
 
-int	main(int ac, char **av)
+void	*ft_memset(void *b, int c, size_t len)
 {
-	t_arg		arg;
+	unsigned char	*wq;
+	size_t			dll;
 
-	if (ac == 2)
+	dll = 0;
+	wq = (unsigned char *)b;
+	while (dll < len)
 	{
-		if (ber_check(av[1]) || map_check(&arg, av[1]))
-			return (1);
-		if (map_init(&arg, av[1]))
-			return (1);
+		wq[dll++] = c;
 	}
-	else
-	{
-		perror("ERROR: missing arg!!!\n");
-		return (1);
-	}
-	return (0);
+	return (wq);
 }

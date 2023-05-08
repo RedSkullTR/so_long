@@ -1,32 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   utils.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aeroglu <aeroglu@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/03 20:19:59 by aeroglu           #+#    #+#             */
-/*   Updated: 2023/05/08 20:51:38 by aeroglu          ###   ########.fr       */
+/*   Created: 2023/05/08 21:15:40 by aeroglu           #+#    #+#             */
+/*   Updated: 2023/05/08 21:20:23 by aeroglu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long.h"
 
-int	main(int ac, char **av)
+int	try_open(t_arg *arg, char *str)
 {
-	t_arg		arg;
+	int	fd;
 
-	if (ac == 2)
+	fd = open(str, O_RDONLY);
+	if (fd < 0)
 	{
-		if (ber_check(av[1]) || map_check(&arg, av[1]))
-			return (1);
-		if (map_init(&arg, av[1]))
-			return (1);
+		perror("File Couldn't Open");
+		ft_exit(arg);
+		return (-1);
 	}
-	else
-	{
-		perror("ERROR: missing arg!!!\n");
-		return (1);
-	}
-	return (0);
+	return (fd);
 }
