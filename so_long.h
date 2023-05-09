@@ -6,7 +6,7 @@
 /*   By: aeroglu <aeroglu@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/26 02:39:45 by aeroglu           #+#    #+#             */
-/*   Updated: 2023/05/08 21:19:44 by aeroglu          ###   ########.fr       */
+/*   Updated: 2023/05/09 02:29:55 by aeroglu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,7 +62,7 @@ int		put_map(t_arg *arg);
 int		ft_action(int key, t_arg *arg);
 int		ft_intlen(int n);
 int		map_init(t_arg *arg, char *str);
-int		try_open(t_arg *arg, char *str);
+int		try_open(char *str);
 void	exit_controlll(t_arg *data);
 void	collectible_control(t_arg *data);
 void	control_line(t_arg *arg);

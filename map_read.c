@@ -6,7 +6,7 @@
 /*   By: aeroglu <aeroglu@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/04 00:53:10 by aeroglu           #+#    #+#             */
-/*   Updated: 2023/05/08 21:20:02 by aeroglu          ###   ########.fr       */
+/*   Updated: 2023/05/09 02:34:35 by aeroglu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,7 @@ void	line_len(t_arg *arg, char *str)
 	int		len;
 	char	c;
 
-	fd = try_open(arg, str);
+	fd = try_open(str);
 	len = 0;
 	arg->map_total_byte = 0;
 	while (read(fd, &c, 1) > 0)

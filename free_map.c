@@ -6,7 +6,7 @@
 /*   By: aeroglu <aeroglu@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/04 03:11:36 by aeroglu           #+#    #+#             */
-/*   Updated: 2023/05/08 21:23:16 by aeroglu          ###   ########.fr       */
+/*   Updated: 2023/05/09 04:24:13 by aeroglu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,14 +27,11 @@ void	free_map(t_arg *arg)
 
 int	ft_exit(t_arg *arg)
 {
-	if(arg != NULL && arg->mlx != NULL)
-	{
-		mlx_clear_window(arg->mlx, arg->mlx_win);
-		mlx_destroy_image(arg->mlx, arg->img_back);
-		mlx_destroy_image(arg->mlx, arg->img_wall);
-		mlx_destroy_image(arg->mlx, arg->img_ply);
-		mlx_destroy_image(arg->mlx, arg->img_hamb);
-	}
+	mlx_clear_window(arg->mlx, arg->mlx_win);
+	mlx_destroy_image(arg->mlx, arg->img_back);
+	mlx_destroy_image(arg->mlx, arg->img_wall);
+	mlx_destroy_image(arg->mlx, arg->img_ply);
+	mlx_destroy_image(arg->mlx, arg->img_hamb);
 	free_map(arg);
 	ft_printf("WON!!");
 	exit(0);
